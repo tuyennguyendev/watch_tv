@@ -15,7 +15,7 @@ class FlashScreen extends StatelessWidget {
       child: BlocConsumer<FlashCubit, FlashState>(
         listener: (context, state) {
           if (state is FlashNavigateToListChannel) {
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               CupertinoPageRoute(
                 builder: (context) {

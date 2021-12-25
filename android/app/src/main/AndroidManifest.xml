@@ -2,9 +2,10 @@
     package="com.example.watch_tv">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="watch_tv"
+        android:label="Watch TV"
         android:name="${applicationName}"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/launcher_icon"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
