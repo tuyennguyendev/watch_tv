@@ -5,11 +5,14 @@ import 'package:flutter/material.dart';
 
 import 'app.dart';
 import 'config/injection.dart';
+import 'firebase_options_dev.dart';
 import 'localization/localization.dart';
 
 FutureOr<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await setupInjection();
   Localization.initApp(const App());
 }
