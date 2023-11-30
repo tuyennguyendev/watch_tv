@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "860321225517",
+    "project_id": "watch-tv-831af",
+    "storage_bucket": "watch-tv-831af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860321225517:android:9794785c065911d85891a4",
+        "android_client_info": {
+          "package_name": "com.vkt.watch_tv.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkvOCs-30eGq4Eb-7PuLpmIiyksAz3JH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
