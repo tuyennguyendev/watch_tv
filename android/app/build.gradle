@@ -30,17 +30,17 @@ android {
     productFlavors {
         dev {
             dimension "flavor-type"
-            applicationId "com.vkt.watch_tv.dev"
+            applicationId "com.vkt.watchtv.dev"
             resValue "string", "app_name", "Watch TV Dev"
         }
         stg {
             dimension "flavor-type"
-            applicationId "com.vkt.watch_tv.stg"
+            applicationId "com.vkt.watchtv.stg"
             resValue "string", "app_name", "Watch TV Staging"
         }
         prod {
             dimension "flavor-type"
-            applicationId "com.vkt.watch_tv.prod"
+            applicationId "com.vkt.watchtv.prod"
             resValue "string", "app_name", "Watch TV"
         }
     }

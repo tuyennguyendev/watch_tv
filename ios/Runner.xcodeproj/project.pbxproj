@@ -25,6 +25,7 @@
 		9A84666FCBF41BE4A45A28DC /* stgDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1DA50A37B2AEF9E35016ABA2 /* stgDebug.xcconfig */; };
 		9C70079B56696D0D798D6C00 /* stgRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B1169E09A7EF963012262B4 /* stgRelease.xcconfig */; };
 		B1A78B3E8A3FF648F8B3A568 /* prodDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D15CF437F1574A8DD5A12AB1 /* prodDebug.xcconfig */; };
+		C4F7D25338E79FEAB9243F31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDB4ED33DFB54399CBBE3DE3 /* GoogleService-Info.plist */; };
 		CDA896ABD095F180A2FCC3F7 /* devDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 75825D47903936BABCDDCC9E /* devDebug.xcconfig */; };
 		DB815E7FA5B28E60D8A34A79 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4E64DD9A4A9A1240053A9A /* Pods_Runner.framework */; };
 		E2159FF0513A6F6566A43163 /* stgProfile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2D30E2F9ABE40AF7FAF1C994 /* stgProfile.xcconfig */; };
@@ -98,6 +99,7 @@
 		A6344B8C859C49565025D2C5 /* prodLaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = prodLaunchScreen.storyboard; path = Runner/prodLaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB731BF59353C26DD03C5A72 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		B38887169D4E3EB3BCBB4C2A /* Pods-Runner.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-dev.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-dev.xcconfig"; sourceTree = "<group>"; };
+		BDB4ED33DFB54399CBBE3DE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Runner/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8118C580043AA429F9AB21C /* Pods-Runner.release-stg.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-stg.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-stg.xcconfig"; sourceTree = "<group>"; };
 		D15CF437F1574A8DD5A12AB1 /* prodDebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = prodDebug.xcconfig; path = Flutter/prodDebug.xcconfig; sourceTree = "<group>"; };
 		D369722DDB75C203138097DA /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				A6344B8C859C49565025D2C5 /* prodLaunchScreen.storyboard */,
 				BE6954787A95422F9E4E849A /* Pods */,
 				6B95FD365666A87E4880E17D /* Frameworks */,
+				BDB4ED33DFB54399CBBE3DE3 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,6 +350,7 @@
 				622AA16985981A8BB8D3E902 /* devLaunchScreen.storyboard in Resources */,
 				686D198C4BDDD4B7BC3CFA63 /* stgLaunchScreen.storyboard in Resources */,
 				874E8136BB9A292069647109 /* prodLaunchScreen.storyboard in Resources */,
+				C4F7D25338E79FEAB9243F31 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +564,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.stg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.stg;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -697,7 +701,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.stg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.stg;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -968,7 +972,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.prod;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1034,7 +1038,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.prod;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1104,7 +1108,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.prod;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -1172,7 +1176,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.dev;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1399,7 +1403,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.dev;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1465,7 +1469,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.stg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.stg;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -1533,7 +1537,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watch_tv.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vkt.watchtv.dev;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";

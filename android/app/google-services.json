@@ -7,9 +7,47 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:860321225517:android:9794785c065911d85891a4",
+        "mobilesdk_app_id": "1:860321225517:android:db8cff21b4ab8a9d5891a4",
         "android_client_info": {
-          "package_name": "com.vkt.watch_tv.dev"
+          "package_name": "com.vkt.watchtv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkvOCs-30eGq4Eb-7PuLpmIiyksAz3JH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860321225517:android:a215e9702dbf5c5e5891a4",
+        "android_client_info": {
+          "package_name": "com.vkt.watchtv.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkvOCs-30eGq4Eb-7PuLpmIiyksAz3JH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860321225517:android:f854ceecc7deca8c5891a4",
+        "android_client_info": {
+          "package_name": "com.vkt.watchtv.stg"
         }
       },
       "oauth_client": [],

@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart'
 ///
 /// Example:
 /// ```dart
-/// import 'firebase_options_dev.dart';
+/// import 'firebase_options_stg.dart';
 /// // ...
 /// await Firebase.initializeApp(
 ///   options: DefaultFirebaseOptions.currentPlatform,
@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDkvOCs-30eGq4Eb-7PuLpmIiyksAz3JH0',
-    appId: '1:860321225517:android:a215e9702dbf5c5e5891a4',
+    appId: '1:860321225517:android:f854ceecc7deca8c5891a4',
     messagingSenderId: '860321225517',
     projectId: 'watch-tv-831af',
     storageBucket: 'watch-tv-831af.appspot.com',
@@ -59,10 +59,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCW1CFVP8Vb3hYYJf88RGx8-DID4GWiBg0',
-    appId: '1:860321225517:ios:72c1f7db76f1e0525891a4',
+    appId: '1:860321225517:ios:7ac27395fd394d0a5891a4',
     messagingSenderId: '860321225517',
     projectId: 'watch-tv-831af',
     storageBucket: 'watch-tv-831af.appspot.com',
-    iosBundleId: 'com.vkt.watchtv.dev',
+    iosBundleId: 'com.vkt.watchtv.stg',
   );
 }

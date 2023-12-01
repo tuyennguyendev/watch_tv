@@ -71,30 +71,30 @@ flavorizr:
       app:
         name: "Watch TV Dev"
       android:
-        applicationId: "com.vkt.watch_tv.dev"
+        applicationId: "com.vkt.watchtv.dev"
         generateDummyAssets: false
       ios:
-        bundleId: "com.vkt.watch_tv.dev"
+        bundleId: "com.vkt.watchtv.dev"
         generateDummyAssets: false
 
     stg:
       app:
         name: "Watch TV Staging"
       android:
-        applicationId: "com.vkt.watch_tv.stg"
+        applicationId: "com.vkt.watchtv.stg"
         generateDummyAssets: false
       ios:
-        bundleId: "com.vkt.watch_tv.stg"
+        bundleId: "com.vkt.watchtv.stg"
         generateDummyAssets: false
 
     prod:
       app:
         name: "Watch TV"
       android:
-        applicationId: "com.vkt.watch_tv.prod"
+        applicationId: "com.vkt.watchtv"
         generateDummyAssets: false
       ios:
-        bundleId: "com.vkt.watch_tv.prod"
+        bundleId: "com.vkt.watchtv"
         generateDummyAssets: false
 
 flutter:
