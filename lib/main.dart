@@ -13,6 +13,6 @@ FutureOr<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await setupInjection();
+  await AppInjection.setupInjection();
   Localization.initApp(const App());
 }

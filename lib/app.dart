@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:watch_tv/ui/crawl_data/crawl_data_screen.dart';
 import 'package:watch_tv/utils/navigation_utils.dart';
 
-import 'flavors.dart';
-import 'ui/login_screen/login_screen.dart';
+import 'config/app_config.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -11,10 +11,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: Environment.title,
+      title: Environment.config.title,
       navigatorKey: NavigationUtils.rootKey,
       debugShowCheckedModeBanner: false,
-      home: const LoginScreen(),
+      home: const CrawlDataScreen(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'RaleWay',

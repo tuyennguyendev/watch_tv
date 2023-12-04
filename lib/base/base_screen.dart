@@ -5,7 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class BaseScreen extends StatefulWidget {
-  const BaseScreen();
+  const BaseScreen({super.key});
 }
 
 abstract class BaseState<S extends BaseScreen, C extends Cubit> extends State<S> {

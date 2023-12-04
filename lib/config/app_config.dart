@@ -1,61 +1,56 @@
-enum AppFlavor {
-  Development,
-  Staging,
-  Production,
+enum Flavor {
+  dev,
+  stg,
+  prod,
+}
+
+class Environment {
+  static Flavor? appFlavor;
+
+  static const AppConfig appConfigDev = AppConfig(
+    appFlavor: Flavor.dev,
+    title: 'Watch TV Dev',
+    name: 'Development',
+    apiBaseUrl: 'https://iptv-org.github.io/api/',
+  );
+
+  static const AppConfig appConfigStg = AppConfig(
+    appFlavor: Flavor.stg,
+    title: 'Watch TV Staging',
+    name: 'Staging',
+    apiBaseUrl: 'https://iptv-org.github.io/api/',
+  );
+  static const AppConfig appConfigProd = AppConfig(
+    appFlavor: Flavor.prod,
+    title: 'Watch TV',
+    name: 'Production',
+    apiBaseUrl: 'https://iptv-org.github.io/api/',
+  );
+
+  static AppConfig get config {
+    switch (appFlavor) {
+      case Flavor.dev:
+        return appConfigDev;
+      case Flavor.stg:
+        return appConfigStg;
+      case Flavor.prod:
+        return appConfigProd;
+      default:
+        return appConfigDev;
+    }
+  }
 }
 
 class AppConfig {
+  final Flavor appFlavor;
+  final String title;
+  final String name;
   final String apiBaseUrl;
-  final AppFlavor appFlavor;
 
-  AppConfig({
-    required this.apiBaseUrl,
+  const AppConfig({
     required this.appFlavor,
+    required this.title,
+    required this.name,
+    required this.apiBaseUrl,
   });
-
-  static AppConfig? _instance;
-
-  static AppConfig devConfig = AppConfig(
-    apiBaseUrl: 'http://localhost:3000/',
-    appFlavor: AppFlavor.Development,
-  );
-
-  static AppConfig stagingConfig = AppConfig(
-    apiBaseUrl: 'http://localhost:3000/',
-    appFlavor: AppFlavor.Staging,
-  );
-
-  static AppConfig productionConfig = AppConfig(
-    apiBaseUrl: 'http://localhost:3000/',
-    appFlavor: AppFlavor.Production,
-  );
-
-  static AppConfig getInstance({String? flavorName}) {
-    if (_instance == null) {
-      switch (flavorName) {
-        case 'development':
-          {
-            _instance = devConfig;
-          }
-          break;
-        case 'staging':
-          {
-            _instance = stagingConfig;
-          }
-          break;
-        case 'production':
-          {
-            _instance = productionConfig;
-          }
-          break;
-        default:
-          {
-            _instance = devConfig;
-          }
-          break;
-      }
-      return _instance!;
-    }
-    return _instance!;
-  }
 }

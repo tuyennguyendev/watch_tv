@@ -4,10 +4,10 @@ import '../network/app_api.dart';
 import '../network/request/login_request.dart';
 
 class LoginRepo {
-  static final AppApi appApi = getIt<AppApi>();
+  final AppApi _appApi = getIt<AppApi>();
 
-  static Future<UserDetail> login(LoginRequest loginRequest) async {
-    final response = await appApi.loginWithNameAndPassword(loginRequest);
+  Future<UserDetail> login(LoginRequest loginRequest) async {
+    final response = await _appApi.loginWithNameAndPassword(loginRequest);
     return response.userDetail;
   }
 }

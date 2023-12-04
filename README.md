@@ -31,13 +31,13 @@ This project is implementing [json_serializable](https://pub.dev/packages/json_s
 generate files. If you make a change to these files, you need to re-run the generator using build_runner:
 
 ```
-flutter pub run build_runner build
+dart run build_runner build
 ```
 
 generator using build_runner and remove conflict file :
 
 ```
-flutter packages pub run build_runner build --delete-conflicting-outputs
+dart run build_runner build --delete-conflicting-outputs
 ```
 
 # Resources

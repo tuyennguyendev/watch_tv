@@ -40,4 +40,7 @@ class Strings {
 
   ///age,Age: {},Tuổi: {},
   String age({List<String>? args}) => 'age'.tr(args: args);
+
+  ///btn_crawl_data,Crawl Data,Cào Data,
+  String get btn_crawl_data => 'btn_crawl_data'.tr();
 }
