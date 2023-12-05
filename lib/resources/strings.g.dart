@@ -43,4 +43,43 @@ class Strings {
 
   ///btn_crawl_data,Crawl Data,Cào Data,
   String get btn_crawl_data => 'btn_crawl_data'.tr();
+
+  ///error_api_not_found,API not found,API not found,
+  String get error_api_not_found => 'error_api_not_found'.tr();
+
+  ///error_internet_server_error,Internal server error,Internal server error,
+  String get error_internet_server_error => 'error_internet_server_error'.tr();
+
+  ///error_service_unavailable,Service unavailable,Service unavailable,
+  String get error_service_unavailable => 'error_service_unavailable'.tr();
+
+  ///error_unexpected_error,Unexpected error occurred,Unexpected error occurred,
+  String get error_unexpected_error => 'error_unexpected_error'.tr();
+
+  ///error_no_network_connection,Network is disconnected. Please try again later,Network is disconnected. Please try again later,
+  String get error_no_network_connection => 'error_no_network_connection'.tr();
+
+  ///error_invalid_status_code,Received invalid status code: {},Received invalid status code: {},
+  String error_invalid_status_code({List<String>? args}) => 'error_invalid_status_code'.tr(args: args);
+
+  ///error_unauthorized_request,Unauthorized request,Unauthorized request,
+  String get error_unauthorized_request => 'error_unauthorized_request'.tr();
+
+  ///error_request_canceled,Request cancelled,Request cancelled,
+  String get error_request_canceled => 'error_request_canceled'.tr();
+
+  ///error_request_timeout,Connection request timeout,Connection request timeout,
+  String get error_request_timeout => 'error_request_timeout'.tr();
+
+  ///error_send_timeout,Connection send timeout,Connection send timeout,
+  String get error_send_timeout => 'error_send_timeout'.tr();
+
+  ///error_receive_timeout,Connection receive timeout,Connection receive timeout,
+  String get error_receive_timeout => 'error_receive_timeout'.tr();
+
+  ///error_hand_shake_msg,Handshake Exception,Handshake Exception,
+  String get error_hand_shake_msg => 'error_hand_shake_msg'.tr();
+
+  ///error_bad_request,Bad request,Bad request,
+  String get error_bad_request => 'error_bad_request'.tr();
 }
