@@ -16,12 +16,12 @@ class HomeScreen extends BaseScreen {
 
 class _HomeScreenState extends BaseState<HomeScreen, HomeCubit> {
   @override
-  initCubit() {
+  onCreateView() {
     cubit = HomeCubit();
   }
 
   @override
-  setup() {}
+  onViewCreated() {}
 
   @override
   Widget buildContent(BuildContext context) {

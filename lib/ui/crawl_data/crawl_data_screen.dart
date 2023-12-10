@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watch_tv/base/base_screen.dart';
 import 'package:watch_tv/resources/R.dart';
-import 'package:watch_tv/ui/crawl_data/cubit/crawl_data_cubit.dart';
-import 'package:watch_tv/utils/widgets/loading_widget.dart';
+import 'cubit/crawl_data_cubit.dart';
 
 class CrawlDataScreen extends BaseScreen {
   const CrawlDataScreen({super.key});
@@ -14,27 +13,40 @@ class CrawlDataScreen extends BaseScreen {
 
 class _CrawlDataScreenState extends BaseState<CrawlDataScreen, CrawlDataCubit> {
   @override
-  initCubit() {
+  onCreateView() {
     cubit = CrawlDataCubit();
   }
 
   @override
-  setup() {}
+  onViewCreated() {}
 
   @override
   Widget buildContent(BuildContext context) {
-    return BlocBuilder<CrawlDataCubit, CrawlDataState>(
+    return BlocConsumer<CrawlDataCubit, CrawlDataState>(
+      listener: (context, state) {
+        if (state is CrawlDataSuccess) {
+          // replaceScreen(ChannelListScreen(channels: cubit.channels));
+        }
+        if (state is CrawlDataFailed) {
+          final snackBar = SnackBar(content: Text(state.message));
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        }
+      },
       builder: (context, state) {
         return Scaffold(
-          body: LoadingWidget(
-            showLoading: state is CrawlDataLoading,
-            child: Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  cubit.getChannelList();
-                },
-                child: Text(R.string.btn_crawl_data),
-              ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    cubit.getChannelList();
+                  },
+                  child: Text(R.string.btn_crawl_data),
+                ),
+                if (state is CrawlDataLoading) const CircularProgressIndicator()
+              ],
             ),
           ),
         );

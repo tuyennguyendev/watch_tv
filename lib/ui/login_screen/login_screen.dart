@@ -108,10 +108,10 @@ class _LoginScreenState extends BaseState<LoginScreen, LoginCubit> {
   }
 
   @override
-  initCubit() {
+  onCreateView() {
     cubit = LoginCubit();
   }
 
   @override
-  setup() {}
+  onViewCreated() {}
 }

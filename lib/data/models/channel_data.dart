@@ -1,14 +1,12 @@
-import 'package:watch_tv/data/network/response/channel_response.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-import 'category_data.dart';
-import 'country_data.dart';
+import '../network/response/channel_response.dart';
+import 'base_model.dart';
 import 'guide_data.dart';
-import 'language_data.dart';
-import 'region_data.dart';
-import 'stream_data.dart';
-import 'subdivision_data.dart';
+import 'streams_data.dart';
 
-class ChannelData {
+@JsonSerializable()
+class ChannelData extends BaseModel {
   const ChannelData({
     this.id,
     this.name,
@@ -27,13 +25,8 @@ class ChannelData {
     this.replacedBy,
     this.website,
     this.logo,
-    this.streamData,
+    this.streamsData,
     this.guideData,
-    this.categoryData,
-    this.languageData,
-    this.countryData,
-    this.subdivisionData,
-    this.regionData,
   });
 
   final String? id;
@@ -53,13 +46,13 @@ class ChannelData {
   final String? replacedBy;
   final String? website;
   final String? logo;
-  final StreamData? streamData;
+  final StreamsData? streamsData;
   final GuideData? guideData;
-  final CategoryData? categoryData;
-  final LanguageData? languageData;
-  final CountryData? countryData;
-  final SubdivisionData? subdivisionData;
-  final RegionData? regionData;
+
+  factory ChannelData.fromJson(Map<String, dynamic> json) => _$ChannelDataFromJson(json);
+
+  @override
+  Map<String, dynamic> toJson() => _$ChannelDataToJson(this);
 
   factory ChannelData.fromChannelResponse(ChannelResponse data) {
     return ChannelData(
@@ -101,13 +94,8 @@ class ChannelData {
     String? replacedBy,
     String? website,
     String? logo,
-    StreamData? streamData,
+    StreamsData? streamData,
     GuideData? guideData,
-    CategoryData? categoryData,
-    LanguageData? languageData,
-    CountryData? countryData,
-    SubdivisionData? subdivisionData,
-    RegionData? regionData,
   }) {
     return ChannelData(
       id: id ?? this.id,
@@ -127,13 +115,53 @@ class ChannelData {
       replacedBy: replacedBy ?? this.replacedBy,
       website: website ?? this.website,
       logo: logo ?? this.logo,
-      streamData: streamData ?? this.streamData,
+      streamsData: streamData ?? this.streamsData,
       guideData: guideData ?? this.guideData,
-      categoryData: categoryData ?? this.categoryData,
-      languageData: languageData ?? this.languageData,
-      countryData: countryData ?? this.countryData,
-      subdivisionData: subdivisionData ?? this.subdivisionData,
-      regionData: regionData ?? this.regionData,
     );
   }
+
+  static ChannelData _$ChannelDataFromJson(Map<String, dynamic> json) => ChannelData(
+        id: json['id'] as String?,
+        name: json['name'] as String?,
+        altNames: (json['altNames'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+        network: json['network'] as String?,
+        owners: (json['owners'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+        country: json['country'] as String?,
+        subdivision: json['subdivision'] as String?,
+        city: json['city'] as String?,
+        broadcastArea: (json['broadcastArea'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+        languages: (json['languages'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+        categories: (json['categories'] as List<dynamic>?)?.map((e) => e as String).toList() ?? const [],
+        isNsfw: json['isNsfw'] as bool?,
+        launched: json['launched'] as String?,
+        closed: json['closed'] as String?,
+        replacedBy: json['replacedBy'] as String?,
+        website: json['website'] as String?,
+        logo: json['logo'] as String?,
+        streamsData:
+            json['streamsData'] == null ? null : StreamsData.fromJson(json['streamsData'] as Map<String, dynamic>),
+        guideData: json['guideData'] == null ? null : GuideData.fromJson(json['guideData'] as Map<String, dynamic>),
+      );
+
+  Map<String, dynamic> _$ChannelDataToJson(ChannelData instance) => <String, dynamic>{
+        'id': instance.id,
+        'name': instance.name,
+        'altNames': instance.altNames,
+        'network': instance.network,
+        'owners': instance.owners,
+        'country': instance.country,
+        'subdivision': instance.subdivision,
+        'city': instance.city,
+        'broadcastArea': instance.broadcastArea,
+        'languages': instance.languages,
+        'categories': instance.categories,
+        'isNsfw': instance.isNsfw,
+        'launched': instance.launched,
+        'closed': instance.closed,
+        'replacedBy': instance.replacedBy,
+        'website': instance.website,
+        'logo': instance.logo,
+        'streamsData': instance.streamsData?.toJson(),
+        'guideData': instance.guideData?.toJson(),
+      };
 }

@@ -11,6 +11,8 @@ abstract class ApiResult<T> with ApiResultMixin<T> {
   const factory ApiResult.success({required T data}) = Success<T>;
 
   const factory ApiResult.failure({required NetworkExceptions error}) = Failure<T>;
+
+  Type get dataType => T;
 }
 
 abstract class Success<T> implements ApiResult<T> {
@@ -29,6 +31,9 @@ class _SuccessImpl<T> implements Success<T> {
   Future<void> when({required SuccessCallback<T> success, required FailureCallback failure}) async {
     return success.call(data);
   }
+
+  @override
+  Type get dataType => T;
 }
 
 abstract class Failure<T> implements ApiResult<T> {
@@ -47,4 +52,7 @@ class _FailureImpl<T> implements Failure<T> {
   Future<void> when({required SuccessCallback<T> success, required FailureCallback failure}) async {
     return failure(error);
   }
+
+  @override
+  Type get dataType => T;
 }

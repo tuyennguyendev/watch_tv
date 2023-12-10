@@ -13,10 +13,10 @@ abstract class BaseState<S extends BaseScreen, C extends Cubit> extends State<S>
 
   @override
   void initState() {
-    initCubit();
+    onCreateView();
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      setup();
+      onViewCreated();
     });
   }
 
@@ -34,9 +34,9 @@ abstract class BaseState<S extends BaseScreen, C extends Cubit> extends State<S>
     );
   }
 
-  initCubit();
+  onCreateView();
 
-  setup();
+  onViewCreated();
 
   Widget buildContent(BuildContext context);
 

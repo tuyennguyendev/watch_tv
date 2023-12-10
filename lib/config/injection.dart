@@ -1,6 +1,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:watch_tv/config/app_config.dart';
 import 'package:watch_tv/data/network/app_api.dart';
@@ -10,6 +11,7 @@ import 'package:watch_tv/data/utils/app_preferences.dart';
 import '../data/repository/iptv_source_repo.dart';
 
 GetIt getIt = GetIt.instance;
+Logger logger = Logger();
 
 class AppInjection {
   static Future setupInjection() async {

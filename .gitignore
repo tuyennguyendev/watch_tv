@@ -48,3 +48,4 @@ pubspec.lock
 .vscode/launch.json
 assets/iptv.m3u
 ios/Podfile.lock
+*.g.dart
